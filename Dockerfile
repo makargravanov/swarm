@@ -12,7 +12,6 @@ RUN --mount=type=cache,target=/usr/local/cargo/registry \
 
 COPY src ./src
 RUN --mount=type=cache,target=/usr/local/cargo/registry \
-	--mount=type=cache,target=/app/target \
 	cargo build --release
 
 FROM debian:bookworm-slim
