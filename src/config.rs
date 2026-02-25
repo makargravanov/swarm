@@ -1,5 +1,4 @@
 use std::{env, net::{IpAddr, SocketAddr}};
-use rand::{rngs::OsRng, RngCore};
 
 pub struct AppConfig {
     pub addr: SocketAddr,
@@ -50,8 +49,7 @@ impl AppConfig {
 }
 
 fn generate_secure_jwt_secret() -> String {
-    let mut bytes = [0_u8; 64];
-    OsRng.fill_bytes(&mut bytes);
+    let bytes: [u8; 64] = rand::random();
 
     let mut output = String::with_capacity(bytes.len() * 2);
     for byte in bytes {
