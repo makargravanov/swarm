@@ -1,9 +1,19 @@
+# syntax=docker/dockerfile:1.7
+
 FROM rust:1.85-bookworm AS builder
 WORKDIR /app
 
 COPY Cargo.toml Cargo.lock ./
+
+RUN mkdir -p src && echo "fn main() {}" > src/main.rs
+RUN --mount=type=cache,target=/usr/local/cargo/registry \
+	--mount=type=cache,target=/app/target \
+	cargo build --release
+
 COPY src ./src
-RUN cargo build --release
+RUN --mount=type=cache,target=/usr/local/cargo/registry \
+	--mount=type=cache,target=/app/target \
+	cargo build --release
 
 FROM debian:bookworm-slim
 WORKDIR /app
