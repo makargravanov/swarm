@@ -5,5 +5,5 @@ param(
     [string]$Branch = "master"
 )
 
-$remoteCommand = "REPO_DIR='$RepoDir' BRANCH='$Branch' bash /home/alex/swarm/scripts/deploy-remote.sh"
+$remoteCommand = "set -euo pipefail; cd '$RepoDir'; git fetch --all --prune; git checkout '$Branch'; git pull --ff-only origin '$Branch'; [ -f .env ] || cp .env.example .env; docker compose up -d --build; docker compose ps"
 ssh "$UserName@$HostName" $remoteCommand
