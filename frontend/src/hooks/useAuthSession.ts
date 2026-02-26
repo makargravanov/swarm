@@ -17,9 +17,10 @@ const resolveInitialToken = (): string => {
 
 interface UseAuthSessionOptions {
   notices: Dictionary['notices']
+  onLoginSuccess?: () => void
 }
 
-export const useAuthSession = ({ notices }: UseAuthSessionOptions) => {
+export const useAuthSession = ({ notices, onLoginSuccess }: UseAuthSessionOptions) => {
   const [authMode, setAuthMode] = useState<AuthMode>('register')
   const [token, setToken] = useState<string>(resolveInitialToken)
   const [user, setUser] = useState<PublicUser | null>(null)
@@ -137,6 +138,7 @@ export const useAuthSession = ({ notices }: UseAuthSessionOptions) => {
       persistToken(response.token)
       setUser(response.user)
       setNotice({ tone: 'success', text: notices.loggedIn })
+      onLoginSuccess?.()
     } catch (error) {
       setNotice({ tone: 'error', text: getErrorText(error, notices.unexpectedError) })
     } finally {

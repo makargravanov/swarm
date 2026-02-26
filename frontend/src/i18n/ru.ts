@@ -2,15 +2,25 @@ import type { Dictionary } from './types'
 
 export const ruDictionary: Dictionary = {
   header: {
-    eyebrow: 'Доступ в Swarm',
+    eyebrow: 'Swarm',
     title: 'Регистрация и авторизация',
+    subtitle: 'Единый вход для доступа к системе',
     localeLabel: 'Язык',
     themeToDark: 'Тёмная тема',
     themeToLight: 'Светлая тема',
   },
+  board: {
+    railTitle: 'Быстрые ссылки',
+    railDescription: 'Скоро здесь появятся дополнительные действия и виджеты.',
+    githubLabel: 'GitHub',
+    heroTitle: 'Обзор пространства',
+    heroDescription: 'Главный блок для будущих материалов и карточек.',
+    showcaseTitle: 'Превью контента',
+    showcaseDescription: 'Тут позже можно разместить скриншоты, новости или onboarding.',
+  },
   server: {
     title: 'Статус сервера',
-    description: 'Мы отслеживаем доступность сервера в реальном времени.',
+    description: 'Мониторинг доступности и состояния API.',
     statusChecking: 'Проверяем сервер...',
     statusOnline: 'Сервер доступен',
     statusOffline: 'Сервер недоступен',
@@ -52,5 +62,10 @@ export const ruDictionary: Dictionary = {
     signedOut: 'Вы вышли из текущей сессии в этом браузере',
     sessionRefreshed: 'Сессия обновлена',
     unexpectedError: 'Непредвиденная ошибка',
+  },
+  workspace: {
+    title: 'Рабочая страница',
+    description: 'Эта страница пока минимальная. Здесь будет основной интерфейс после входа.',
+    backToAuth: 'Вернуться к авторизации',
   },
 }

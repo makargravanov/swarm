@@ -5,28 +5,47 @@
   --bg: #faf9f5;
   --bg-surface: #ffffff;
   --bg-muted: #e8e6dc;
+  --bg-canvas:
+    radial-gradient(circle at 8% 2%, color-mix(in srgb, var(--accent-secondary) 16%, transparent), transparent 36%),
+    radial-gradient(circle at 84% 2%, color-mix(in srgb, var(--accent-primary) 15%, transparent), transparent 30%),
+    var(--bg);
   --text-primary: #141413;
   --text-secondary: #3b3934;
   --text-muted: #7d7a72;
   --border-color: #d8d5c9;
-  --accent-primary: #d97757;
-  --accent-secondary: #6a9bcc;
+  --accent-primary: #c88168;
+  --accent-secondary: #6f8fb6;
   --accent-tertiary: #788c5d;
+  --btn-primary-bg: #c99383;
+  --btn-primary-bg-hover: #bb8575;
+  --btn-primary-border: #b77d6d;
+  --btn-primary-text: #211815;
+  --btn-surface-bg: #f5f1e8;
+  --btn-surface-bg-hover: #ebe4d9;
+  --btn-surface-border: #d4cbbb;
   --shadow-rgb: 20, 20, 19;
 }
 
 :root[data-theme='dark'] {
   color-scheme: dark;
   --bg: #141413;
-  --bg-surface: #1e1d1b;
-  --bg-muted: #272521;
-  --text-primary: #faf9f5;
-  --text-secondary: #d1cdc1;
-  --text-muted: #b0aea5;
-  --border-color: #3b3933;
-  --accent-primary: #d97757;
-  --accent-secondary: #6a9bcc;
+  --bg-surface: #1b1a18;
+  --bg-muted: #23211f;
+  --bg-canvas: linear-gradient(180deg, #181715 0%, #141413 100%);
+  --text-primary: #f1ede4;
+  --text-secondary: #c6beae;
+  --text-muted: #9f978a;
+  --border-color: #37332d;
+  --accent-primary: #b98069;
+  --accent-secondary: #7a91b0;
   --accent-tertiary: #788c5d;
+  --btn-primary-bg: #3b2f2a;
+  --btn-primary-bg-hover: #473730;
+  --btn-primary-border: #5c473f;
+  --btn-primary-text: #f2e4d9;
+  --btn-surface-bg: #22201d;
+  --btn-surface-bg-hover: #2a2723;
+  --btn-surface-border: #3a3530;
   --shadow-rgb: 0, 0, 0;
 }
 
@@ -43,10 +62,7 @@ body,
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(circle at 8% 2%, color-mix(in srgb, var(--accent-secondary) 16%, transparent), transparent 36%),
-    radial-gradient(circle at 84% 2%, color-mix(in srgb, var(--accent-primary) 15%, transparent), transparent 30%),
-    var(--bg);
+  background: var(--bg-canvas);
   color: var(--text-primary);
   font-family: 'Lora', Georgia, serif;
   line-height: 1.5;

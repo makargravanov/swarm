@@ -21,6 +21,7 @@ export function AppHeader({
       <div>
         <p className="eyebrow">{strings.eyebrow}</p>
         <h1>{strings.title}</h1>
+        <p className="header-subtitle">{strings.subtitle}</p>
       </div>
 
       <div className="topbar-controls">

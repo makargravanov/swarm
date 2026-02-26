@@ -2,15 +2,25 @@ import type { Dictionary } from './types'
 
 export const enDictionary: Dictionary = {
   header: {
-    eyebrow: 'Swarm access',
+    eyebrow: 'Swarm',
     title: 'Registration and authorization',
+    subtitle: 'Single entry point to the platform',
     localeLabel: 'Language',
     themeToDark: 'Switch to dark',
     themeToLight: 'Switch to light',
   },
+  board: {
+    railTitle: 'Quick links',
+    railDescription: 'Extra actions and widgets can be placed here later.',
+    githubLabel: 'GitHub',
+    heroTitle: 'Space overview',
+    heroDescription: 'Reserved top strip for upcoming highlights and modules.',
+    showcaseTitle: 'Content preview',
+    showcaseDescription: 'Future spot for screenshots, updates or onboarding visuals.',
+  },
   server: {
     title: 'Server status',
-    description: 'We monitor server availability in real time.',
+    description: 'Availability and API health monitoring.',
     statusChecking: 'Checking server...',
     statusOnline: 'Server online',
     statusOffline: 'Server offline',
@@ -52,5 +62,10 @@ export const enDictionary: Dictionary = {
     signedOut: 'You signed out from this browser session',
     sessionRefreshed: 'Session refreshed',
     unexpectedError: 'Unexpected error',
+  },
+  workspace: {
+    title: 'Workspace page',
+    description: 'This page is intentionally minimal for now. The main post-login UI will go here.',
+    backToAuth: 'Back to auth page',
   },
 }

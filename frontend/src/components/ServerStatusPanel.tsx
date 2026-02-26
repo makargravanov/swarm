@@ -37,21 +37,25 @@ export function ServerStatusPanel({
 
   return (
     <section className="panel intro-panel">
-      <h2>{strings.title}</h2>
-      <p>{strings.description}</p>
-
-      <div className={`status-pill status-${serverStatus}`}>
-        <span className="status-dot" aria-hidden="true" />
-        <span>{getStatusLabel(serverStatus, strings)}</span>
+      <div className="server-copy">
+        <h2>{strings.title}</h2>
+        <p>{strings.description}</p>
       </div>
 
-      <div className="health-meta">
-        <p>
-          {strings.lastChecked}: {formattedCheckedAt}
-        </p>
-        <button type="button" className="ghost-button" onClick={onCheckNow} disabled={isCheckingNow}>
-          {strings.checkNow}
-        </button>
+      <div className="server-actions">
+        <div className={`status-pill status-${serverStatus}`}>
+          <span className="status-dot" aria-hidden="true" />
+          <span>{getStatusLabel(serverStatus, strings)}</span>
+        </div>
+
+        <div className="health-meta">
+          <p>
+            {strings.lastChecked}: {formattedCheckedAt}
+          </p>
+          <button type="button" className="ghost-button" onClick={onCheckNow} disabled={isCheckingNow}>
+            {strings.checkNow}
+          </button>
+        </div>
       </div>
     </section>
   )

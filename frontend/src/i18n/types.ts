@@ -4,9 +4,19 @@ export interface Dictionary {
   header: {
     eyebrow: string
     title: string
+    subtitle: string
     localeLabel: string
     themeToDark: string
     themeToLight: string
+  }
+  board: {
+    railTitle: string
+    railDescription: string
+    githubLabel: string
+    heroTitle: string
+    heroDescription: string
+    showcaseTitle: string
+    showcaseDescription: string
   }
   server: {
     title: string
@@ -52,5 +62,10 @@ export interface Dictionary {
     signedOut: string
     sessionRefreshed: string
     unexpectedError: string
+  }
+  workspace: {
+    title: string
+    description: string
+    backToAuth: string
   }
 }
