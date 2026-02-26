@@ -3,5 +3,7 @@ target
 .gitignore
 .env
 .idea
+frontend
+local-info
 Dockerfile
 docker-compose.yml
